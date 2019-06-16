@@ -9,3 +9,4 @@ get_header();
 //cykelturer
 
 //footer
+get_footer();
