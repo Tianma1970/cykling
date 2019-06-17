@@ -21,7 +21,7 @@ add_action('init','ck_register_menues');
 	// Add Theme CSS
 	wp_enqueue_style('style', get_stylesheet_directory_uri() . '/style.css', ['bootstrap']);
 	// Add Theme Print CSS
-	wp_enqueue_style('print-style', get_stylesheet_directory_uri() . '/assets/css/print.css', ['bootstrap', 'style'], null, 'print');
+	wp_enqueue_style('print-style', get_stylesheet_directory_uri() . '/css/print.css', ['bootstrap', 'style'], null, 'print');
 	/**
 	 * Scripts
 	 */
@@ -35,7 +35,7 @@ add_action('init','ck_register_menues');
 	wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', ['jquery', 'popper'], '4.3.1', true);
 
 	//Add script.js
-	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/script.js', ['jquery', 'popper', 'bootstrap'], false, true);
+	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/js/script.js', ['jquery', 'popper', 'bootstrap'], false, true);
  };
 
  add_action('wp_enqueue_scripts', 'ck_register_scripts_and_styles');
