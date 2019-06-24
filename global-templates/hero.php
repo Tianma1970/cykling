@@ -11,9 +11,9 @@
     }
     ?>
 
-    <div class="jumbotron jumbotron-fluid text-white mt-3" style="background-image: url(<?php get_field('hero-background-image'); ?>);">
+    <div class="jumbotron jumbotron-fluid text-dark mt-3" style="background-image: url(<?php the_field('hero_image'); ?>);">
         <div class="row">
-            <div class="hero-wrapper ml-3" id="hero">
+            <div class="hero-wrapper ml-5" id="hero">
                 <h1>
                 <?php the_field('hero_title'); ?>
                 </h1>
