@@ -13,7 +13,7 @@ $ck_bikerides = new WP_Query([
 if($ck_bikerides->have_posts()) {
     //success
     ?>
-    <div class="wrapper" id ="wrapper-ck-usps">
+    <div class="wrapper mt-5" id ="wrapper-ck-usps">
     
         <div class="container">
         
