@@ -40,6 +40,39 @@ add_action('init','ck_register_menues');
 
  add_action('wp_enqueue_scripts', 'ck_register_scripts_and_styles');
 
+
+ /**
+  * Register the Hero Background
+  */
+
+  function ck_theme_setup() {
+     //Add support for post thumbnails
+     add_theme_support('post-thumbnails');
+     //Set imag size for blog thumbnail
+     set_post_thumbnail_size(180, 0, false);
+     //Add Image size for single post featured image
+     add_image_size('featured-image', 1110, 0, false);
+     //Add support for custom logo
+     add_theme_support('custom-logo', [
+               'height'       => 40,
+               'width'        => 200,
+               'flex-width'   => true,
+               'flex-height'  => false,
+               'header-text'  => ['site-title', 'site-description'],
+     ]);
+     //Add support for custom header
+   //   add_theme_support('custom-header', [
+   //             'default-image' => get_stylesheet_directory_uri() . '/assets/img/vinninge.jpg
+   //             ',
+   //             'default-text-color' => '000',
+   //             'width'              => 2560,
+   //             'height'             => 500,
+   //             'flex-width'         => true,
+   //             'flex-height'        => false
+   //   ]);
+  };
+  add_action('after_setup_theme', 'ck_theme_setup');
+
 /**
  * Register theme widget area
  * @return void
@@ -75,3 +108,21 @@ add_action('init','ck_register_menues');
      ]);
  }
 add_action('widgets_init', 'ck_widgets_init');
+/**
+ * Filterthe excerpt length to 20 words
+ */
+
+function cykling_excerpt_length($length) {
+   return 20;
+};
+
+add_filter('excerpt_length', 'cykling_excerpt_length', 999, 1);
+
+/**
+ * Modify excerpt suffix
+ */
+function cykling_excerpt_more($more) {
+   return '<div class="d-flex justify-content-center"><a href="' . get_permalink() . '" class="btn btn-success">Read more &raquo;</a></div>';
+};
+
+add_filter('excerpt_more', 'cykling_excerpt_more', 999, 1);
