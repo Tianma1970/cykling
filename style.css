@@ -13,3 +13,31 @@ Text Domain: cykling
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+.body{
+    background-color: rgb(170, 170, 170)
+}
+#wrapper-ck-usps {
+    background: url(https://picsum.photos/1920/500/?random);
+    margin-top: 10px;
+}
+.usp {
+    background-color: rgba(170, 170, 170, 0.76);
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+#wrapper-ck-bikerides {
+    background-image: url("assets/img/ridewrapper.jpg")
+}
+
+#footer-wrapper {
+
+}
+
+.error-wrapper {
+    background-color: rgb(170, 170, 170) 
+}
