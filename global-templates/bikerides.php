@@ -17,7 +17,7 @@ if($ck_bikerides->have_posts()) {
     
         <div class="container">
         
-            <h1><?php _e('My bikerides', 'cycling'); ?></h1>
+            <h1 class="text-center"><?php _e('My bikerides', 'cycling'); ?></h1>
 
             <div id="side-wrapper" class="row">
             
