@@ -14,12 +14,13 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-.body{
-    background-color: rgb(170, 170, 170)
+.home{
+    background-color: rgb(218, 210, 210)
 }
 #wrapper-ck-usps {
     background: url(https://picsum.photos/1920/500/?random);
     margin-top: 10px;
+    border-radius: 20px;
 }
 .usp {
     background-color: rgba(170, 170, 170, 0.76);
@@ -31,10 +32,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 #wrapper-ck-bikerides {
-    background-image: url("assets/img/ridewrapper.jpg")
+    background-image: url("assets/img/ridewrapper.jpg");
+    background-size: cover;
+    border-radius: 20px;
 }
 
-#footer-wrapper {
+.site-footer {
+    margin-top: 30px;
+    background-image: url("assets/img/body-background-image_431157.jpg");
+    border-radius: 20px;
 
 }
 
