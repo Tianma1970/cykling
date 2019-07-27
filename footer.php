@@ -1,5 +1,5 @@
         <footer class="site-footer">
-            <div class="container">
+            <div id="footer-wrapper" class="container">
                 <div class="row">
                     <?php dynamic_sidebar('footer-sidebar'); ?>
                 </div>
