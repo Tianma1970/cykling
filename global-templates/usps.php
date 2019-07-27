@@ -14,7 +14,7 @@ if($ck_usps->have_posts()) {
     ?>
     <div class="wrapper" id ="wrapper-ck-usps">
     
-        <div class="container">
+        <div id="usps-wrapper" class="container">
         
             <h1><?php _e('Why travelling by cycle', 'cycling'); ?></h1>
 
