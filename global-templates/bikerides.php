@@ -3,7 +3,7 @@
 
 $ck_bikerides = new WP_Query([
     'post_type'         => 'ck_bikerides',
-    'posts_per_page'    => -1,
+    'posts_per_page'    => 3,
     'order_by'          => 'title',
     'order'             => 'asc'
 ]);
@@ -13,13 +13,13 @@ $ck_bikerides = new WP_Query([
 if($ck_bikerides->have_posts()) {
     //success
     ?>
-    <div class="wrapper mt-5" id ="wrapper-ck-usps">
+    <div class="wrapper mt-5" id ="wrapper-ck-bikerides">
     
         <div class="container">
         
             <h1><?php _e('My bikerides', 'cycling'); ?></h1>
 
-            <div class="row">
+            <div id="side-wrapper" class="row">
             
                 <!--Loop over the ck_usp items-->
                 <?php
