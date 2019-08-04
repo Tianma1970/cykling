@@ -9,6 +9,14 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php if (has_nav_menu('main-menu')) {
+    wp_nav_menu([
+        'theme_location' => 'main-menu',
+        //'container_class' => 'collapse navbar-collapse'
+        ]);
+                
+                } ?>
+
 <?php get_template_part('global-templates/header-image'); ?>
 
     
