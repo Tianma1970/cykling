@@ -2,7 +2,8 @@
 
 function ck_register_menues() {
     register_nav_menus([
-        'main-menu' => 'Main Menu'
+         'header-menu' => __('Header Menu'),
+         'main-menu' => __('Main Menu')
     ]);
 }
 
@@ -28,7 +29,7 @@ add_action('init','ck_register_menues');
 	// Remove WordPress jQuery
 	wp_deregister_script('jquery');
 	// Add jQuery
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', [], '3.3.1', true);
+	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', [], '3.3.1', true);
 	// Add popper.js
 	wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', ['jquery'], '1.14.7', true);
 	// Add bootstrap.js
@@ -61,15 +62,16 @@ add_action('init','ck_register_menues');
                'header-text'  => ['site-title', 'site-description'],
      ]);
      //Add support for custom header
-   //   add_theme_support('custom-header', [
-   //             'default-image' => get_stylesheet_directory_uri() . '/assets/img/vinninge.jpg
-   //             ',
-   //             'default-text-color' => '000',
-   //             'width'              => 2560,
-   //             'height'             => 500,
-   //             'flex-width'         => true,
-   //             'flex-height'        => false
-   //   ]);
+      add_theme_support('custom-header', [
+                /*'default-image' => get_stylesheet_directory_uri() . '/assets/img/vinninge.jpg
+                ',*/
+                'default-text-color' => '000',
+                'width'              => 2560,
+                'height'             => 1000,
+                'flex-width'         => true,
+                'flex-height'        => false
+      ]);
+      load_theme_textdomain('cykling', get_template_directory() . '/languages');
   };
   add_action('after_setup_theme', 'ck_theme_setup');
 
@@ -126,3 +128,12 @@ function cykling_excerpt_more($more) {
 };
 
 add_filter('excerpt_more', 'cykling_excerpt_more', 999, 1);
+
+/**
+ * include font-awesome
+ */
+
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+}
