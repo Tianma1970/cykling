@@ -39,11 +39,73 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .site-footer {
     margin-top: 30px;
-    background-image: url("assets/img/body-background-image_431157.jpg");
+    background-image: url("assets/img/Texture_05_A-small-map9e01c2b231b95edfd899e8ea275d63d0.jpg");
     border-radius: 20px;
 
 }
 
 .error-wrapper {
     background-color: rgb(170, 170, 170) 
+}
+
+.bikeride {
+    background-image: url("assets/img/Texture_05_A-small-map9e01c2b231b95edfd899e8ea275d63d0.jpg");
+    border-radius: 10px;
+}
+
+/*The animator styles*/
+.datas{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.data{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+.lc{
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  padding-left: 0px;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+.numbers>div{
+  border-top: 1px solid #6c5c5d;
+  border-right: 1px solid #6c5c5d;
+  padding: 0px 0 9px;
+  line-height: 34px;
+  font-size: 15px;
+  background: linear-gradient(to bottom, #31221f, #030000);
+  color: #c3bcb6;
+  font-family: sans-serif;
+  text-shadow: 
+  -1px -1px 0 #030000,
+  1px -1px 0 #030000,
+  -1px 1px 0 #030000,
+  1px 1px 0 #030000,
+  0 0 4px #fff;
+  letter-spacing: 3px;
+  font-family: courier;
+  font-weight: bold;
+  font-size: 30px;
+  height: 30px;
+}
+
+.c-3{
+  justify-content: flex-start;
+  max-width: 150px;
+}
+.c3>div{
+  background-color: rgba(0,0,0,0.7);
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
