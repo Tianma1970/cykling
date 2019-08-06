@@ -15,24 +15,24 @@ if($ck_usps->have_posts()) {
     <div class="wrapper" id ="wrapper-ck-usps">
     
         <div id="usps-wrapper" class="container">
-        
-            <h1 class="text-center"><?php _e('Why travelling by cycle', 'cycling'); ?></h1>
-
-            <div class="row">
-            
-                <!--Loop over the ck_usp items-->
-                <?php
-                while($ck_usps->have_posts()){
-                    $ck_usps->the_post();
-                    get_template_part('loop-templates/content', 'usp'); ?>
-
-                <?php
-                }
-                //don't forget to reset postdata
-                wp_reset_postdata();
-                ?>
-            
+            <div class="usp col-6 md-6 xs-12 offset-3">
+                <h1 class="text-center"><?php _e('Why travelling by cycle', 'cycling'); ?></h1>
             </div>
+                    <div class="row">
+
+                        <!--Loop over the ck_usp items-->
+                        <?php
+                        while($ck_usps->have_posts()){
+                            $ck_usps->the_post();
+                            get_template_part('loop-templates/content',     'usp'); ?>
+
+                        <?php
+                        }
+                        //don't forget to reset postdata
+                        wp_reset_postdata();
+                        ?>
+
+                    </div>
         
         </div>
     
