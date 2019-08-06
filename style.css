@@ -17,6 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .home{
     background-color: rgb(218, 210, 210)
 }
+
 #wrapper-ck-usps {
     background: url(https://picsum.photos/1920/500/?random);
     margin-top: 10px;
@@ -30,6 +31,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
     padding-bottom: 30px;
     margin-bottom: 10px;
 }
+/*button styles*/
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 #wrapper-ck-bikerides {
     background-image: url("assets/img/ridewrapper.jpg");
