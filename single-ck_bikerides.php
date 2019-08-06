@@ -100,9 +100,20 @@
         
         </div>
     </div>
-                    <div class="col-md-3 mt-3">
-                        <?php get_sidebar(); ?>
-                    </div><hr>
+            <div class="col-md-3 mt-3">
+                <?php get_sidebar(); ?>
+			</div>
+	<div class="col-md-12">
+		<div class="pagination-links d-flex justify-content-around mt-3">
+    		<div class="previous-post">
+    		    <button class="btn btn-outline-secondary"><?php 	previous_post_link('&laquo;	 %link', __('Previous Bikeride', 	'cykling')); ?></button>
+    		</div>
+    		<div class="next-post">
+    		    <button class="btn btn-outline-secondary"><?php 	next_post_link('%link &raquo;', __('Next Bikeride', 		'cykling')); ?></button>
+    		</div>    
+		</div>
+	</div>
+					
 
 
     
