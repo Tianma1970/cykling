@@ -1,6 +1,7 @@
 <?php
 
 get_header(); ?>
+<?php get_template_part('nav'); ?>
 
 <main class="container">
     <section class="row">

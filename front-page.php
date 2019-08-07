@@ -8,12 +8,14 @@ get_header();
 
 
 
-//Hero
 ?>
+    <?php get_template_part('nav'); ?>
+<!--Hero-->
     <?php get_template_part('global-templates/hero'); ?> 
-<div class="slider">
+<!-- <div class="slider">
     <div class="row">
-        <div class="col-md">
+        <div class="col-md"> -->
+<!--Usps-->
             <?php get_template_part('global-templates/usps'); 
             //The slider
             ?>
