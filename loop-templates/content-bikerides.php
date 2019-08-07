@@ -12,6 +12,12 @@
             ?>
             <?php endif; ?>
                 <h1><?php the_title(); ?></h1>
+            <?php if(get_field('km')) { ?>
+                <p><i>Length:&nbsp;</i><?php the_field('km'); ?>km</p>
+                <?php
+            }
+            ?>
+             
                 <?php
                 the_excerpt();
                 ?>
