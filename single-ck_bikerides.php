@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<?php //get_template_part('global-templates/hero'); ?>
+<?php get_template_part('nav'); ?>
 
 <!-- This is a single bikeride cpt -->
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
