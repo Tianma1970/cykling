@@ -1,10 +1,11 @@
 <?php
+require('inc/bs4navwalker.php');
 
 function ck_register_menues() {
     register_nav_menus([
-         'header-menu' => __('Header Menu'),
          'main-menu' => __('Main Menu')
     ]);
+    
 }
 
 add_action('init','ck_register_menues');
