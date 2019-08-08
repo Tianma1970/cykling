@@ -3,13 +3,14 @@ get_header(); ?>
 
 <?php get_template_part('nav'); 
 
+$ourCurrentPage = get_query_var('paged');
 
 $ck_bikerides = new WP_Query([
     'post_type'         => 'ck_bikerides',
-    //'posts_per_page'    => -1,
+    //'posts_per_page'    =>  -1,
     'order_by'          => 'title',
     'order'             => 'desc',
-    'paged'             => get_query_var('paged')
+    'paged'             => $ourCurrentPage
     ]);
     
     //do we get anu usps?
@@ -34,17 +35,14 @@ if($ck_bikerides->have_posts()) {
 
                 <?php
                 }
-                echo paginate_links();
+                //echo paginate_links();
                 ?>
-                <div class="pagination-links d-flex justify-content-between mt-4">
-                    
-                    <div class="previous-post">
-                        <?php previous_posts_link('&laquo; %link', __('Previous Post', 'cykling')); ?>
-                    </div>
-                    <div class="next-post">
-                        <?php next_posts_link('&raquo; %link', __('Next Post', 'cykling'), $ck_bikerides->max_num_pages); ?>
-                    </div>    
-                </div>
+                <button class="btn btn-outline-secondary col-md-2 mt-4 offset-4">
+                  <?php  
+                    echo paginate_links([
+                        'total' => $ck_bikerides->max_num_pages
+                    ]) ?>
+                </button>
                 
                 <?php
                 //don't forget to reset postdata
