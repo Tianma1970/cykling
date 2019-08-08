@@ -7,7 +7,7 @@ if(have_posts()) {
     //success
 }
 ?>
-<div class="wrapper" id="wrapper-bikerides">
+<div class="bikeride" id="wrapper-bikerides">
     <div class="container">
         <h1><?php __('All Bikerides', 'cykling'); ?></h1>
             <div class="row">
