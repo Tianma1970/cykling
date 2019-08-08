@@ -1,3 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 <?php
 
 $ck_usps = new WP_Query([
@@ -5,9 +8,17 @@ $ck_usps = new WP_Query([
     'posts_per_page'    => -1,
     'order_by'          => 'title',
     'order'             => 'asc'
-]);
+]); ?>
 
-    //do we get anu usps?
+<!--jQuery-->
+<script>
+    $(document).ready(function(){
+        $('.wrapper').css('display', 'none'),
+        $('.wrapper').fadeIn(5000);
+    })
+</script>
+        <?php
+        //do we get anny usps?
 
 if($ck_usps->have_posts()) {
     //success
@@ -15,7 +26,7 @@ if($ck_usps->have_posts()) {
     <div class="wrapper" id ="wrapper-ck-usps">
     
         <div id="usps-wrapper" class="container">
-            <div class="usp col-6 md-6 xs-12 offset-3">
+            <div class="rubrik col-5 md-5 xs-12 offset-3">
                 <h1 class="text-center"><?php _e('Why travelling by cycle', 'cycling'); ?></h1>
             </div>
                     <div class="row">
