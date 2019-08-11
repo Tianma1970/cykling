@@ -33,18 +33,39 @@ $ck_bikerides = new WP_Query([
                     get_template_part('loop-templates/content', 'bikerides'); 
 
                     //don't forget to reset postdata
-                    //wp_reset_postdata();
+                    
                 }; ?>
-                <button class="btn btn-outline-secondary col-md-2 mt-4 offset-4">
-                  <?php  
-                    echo paginate_links([
-                        'total' => $ck_bikerides->max_num_pages
-                    ]) ?>
-                </button>
-                <?php
-            }
-                ?>  
             </div>
+
+            <?php 
+            $next_posts_link = get_next_posts_link(__('Next Page &raquo;', 'cykling'), $ck_bikerides->max_num_pages);
+            $previous_posts_link = get_previous_posts_link(__('&laquo; Previous Page  ','cykling'));
+
+            if($next_posts_link || $previous_posts_link): ?>
+            
+                <div class="usp row">
+                    <div class="col-md-8 offset-2">
+                        <!--<button class="btn btn-info col-md-2 mt-4">-->
+                          <?php  
+                            // echo paginate_links([
+                            //     'total' => $ck_bikerides->max_num_pages
+                            // ])
+                             previous_posts_link(__('&laquo; Previous Page  ',        'mybasictheme')); ?>
+                            </div>
+                        <!--</button>-->
+                            
+				        <!--<button class="btn btn-info col-md-2">-->	
+				        	<?php next_posts_link(__('Next Page &raquo;', 'mybasictheme'), $ck_bikerides->max_num_pages);
+                                ?>
+                        <!--</button>-->
+                    </div>
+                </div>
+            <?php endif; ?>
+                
+                <?php
+                wp_reset_postdata();
+            } 
+                ?>  
     </div>
 </div>
     
