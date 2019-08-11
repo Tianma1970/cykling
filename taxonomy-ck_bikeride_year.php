@@ -22,7 +22,7 @@ $ck_bikerides = new WP_Query([
         <div class="usp col-md-6 offset-3">
             <div class="categories mt-3">
                 <h1><?php __('All Bikerides', 'cykling'); ?></h1>
-                <h2>Bike rides riden in &nbsp;<?php the_terms(
+                <h2>Bike rides ridden in &nbsp;<?php the_terms(
                     get_the_ID(), 'ck_bikeride_year'); ?></h2>
             </div>
         </div>
