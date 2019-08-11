@@ -134,6 +134,10 @@ a{
   margin-bottom: 10px;
 }
 
+img {
+  border-radius: 15px;
+}
+
 /* Underline From Center */
 /* .hvr-underline-from-center {
   display: inline-block;
