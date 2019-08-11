@@ -1,7 +1,11 @@
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+		
 <?php get_header(); ?>
 
 <?php get_template_part('nav'); ?>
+
 
 <!-- This is a single bikeride cpt -->
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
@@ -9,7 +13,9 @@
         <div class="row">
             <div class="col-md-9">
                 <h1><?php the_title(); ?></h1>
-                    <?php the_content(); ?>
+					<?php the_content(); ?>
+					
+					<p>written by:<i> &nbsp;<?php the_author(); ?>, the biker 🚴🏼‍♀️</i></p>
 
                     <div class="length">
                         <?php the_terms(
@@ -23,13 +29,17 @@
                         <?php the_terms(
                                 get_the_ID(), 'ck_bikeride_country',
                                 __('Country: ', 'cykling')); ?><br>
+						
+						<?php the_terms(
+                                get_the_ID(), 'ck_bikeride_year',
+                                __('Cycled in: ', 'cykling')); ?><br>
 
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>
                 <!--The animator-->
                 <div class="container">
-                    <div class="datas col-md-9">
+                    <div class="datas col-md-9 xs-6">
                         <div class="data mt-9 mt-1">
                             <input type="radio" name="data"         value="<?php the_field('km'); ?>"><label>km</label>
                             <input type="radio" name="data"         value="<?php the_field('elevation'); ?>"><label>elev (m)</label>
