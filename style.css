@@ -1,4 +1,4 @@
-/*
+/* 
 Theme Name: Cykling
 Theme URI: http://wordpress.org/themes/cykling
 Author: Tillmann Weimer
@@ -55,27 +55,32 @@ a{
 
 #wrapper-ck-bikerides {
     background-image: url("assets/img/ridewrapper.jpg");
-    /* background-image: url("assets/img/Texture_05_A-small-map9e01c2b231b95edfd899e8ea275d63d0.jpg"); */
-    /* background-color: rgb(130, 130, 130); */
     background-size: cover;
     border-radius: 20px;
 }
 
 .site-footer {
     margin-top: 30px;
-    background-image: url("assets/img/Texture_05_A-small-map9e01c2b231b95edfd899e8ea275d63d0.jpg");
-    border-radius: 20px;
 
 }
 
 .error-wrapper {
     background-color: rgb(170, 170, 170) 
 }
-
+/*single bikeride*/
 .bikeride {
-    background-image: url("assets/img/Texture_05_A-small-map9e01c2b231b95edfd899e8ea275d63d0.jpg");
+    background-color: rgba(240, 240, 240);
     border-radius: 10px;
 }
+
+.col-md-8.single {
+  border: solid black;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
 
 /*The animator styles*/
 .datas{
@@ -86,6 +91,7 @@ a{
   border-radius: 10px;
   background-color: rgba(0,0,0,0.5);
   color: white;
+  margin-bottom: 10px;
 }
 
 .data{
@@ -138,6 +144,12 @@ img {
   border-radius: 15px;
 }
 
+
+/*footer style*/
+
+#footer-wrapper {
+  margin-left: 20px;
+}
 /* Underline From Center */
 /* .hvr-underline-from-center {
   display: inline-block;

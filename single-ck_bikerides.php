@@ -11,7 +11,7 @@
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <div class="bikeride col-md-12 lg-12">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8 col-sm-8 single">
                 <h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 					
